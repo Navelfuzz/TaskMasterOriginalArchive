@@ -1,0 +1,525 @@
+Index: app/src/main/res/values/themes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources xmlns:tools=\"http://schemas.android.com/tools\">\n    <!-- Base application theme. -->\n    <style name=\"Base.Theme.TaskMaster\" parent=\"Theme.Material3.DayNight.NoActionBar\">\n        <!-- Customize your light theme here. -->\n        <!-- <item name=\"colorPrimary\">@color/my_light_primary</item> -->\n    </style>\n\n    <style name=\"Theme.TaskMaster\" parent=\"Base.Theme.TaskMaster\" />\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/themes.xml b/app/src/main/res/values/themes.xml
+--- a/app/src/main/res/values/themes.xml	(revision f3e122c9c3493858f1d16253235e8e697e033a38)
++++ b/app/src/main/res/values/themes.xml	(date 1693306710568)
+@@ -1,6 +1,6 @@
+ <resources xmlns:tools="http://schemas.android.com/tools">
+     <!-- Base application theme. -->
+-    <style name="Base.Theme.TaskMaster" parent="Theme.Material3.DayNight.NoActionBar">
++    <style name="Base.Theme.TaskMaster" parent="Theme.Material3.DayNight">
+         <!-- Customize your light theme here. -->
+         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+     </style>
+Index: app/src/main/java/com/navelfuzz/taskmaster/Activities/AddTaskActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.navelfuzz.taskmaster.activities;\n\npublic class AddTaskActivity {\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/navelfuzz/taskmaster/Activities/AddTaskActivity.java b/app/src/main/java/com/navelfuzz/taskmaster/Activities/AddTaskActivity.java
+--- a/app/src/main/java/com/navelfuzz/taskmaster/Activities/AddTaskActivity.java	(revision f3e122c9c3493858f1d16253235e8e697e033a38)
++++ b/app/src/main/java/com/navelfuzz/taskmaster/Activities/AddTaskActivity.java	(date 1693329096540)
+@@ -1,4 +1,27 @@
+-package com.navelfuzz.taskmaster.activities;
++package com.navelfuzz.taskmaster.Activities;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.os.Bundle;
++import android.widget.Button;
++import android.widget.TextView;
++
++import com.navelfuzz.taskmaster.R;
++
++public class AddTaskActivity extends AppCompatActivity {
+ 
+-public class AddTaskActivity {
++    @Override
++    protected void onCreate(Bundle savedInstanceState){
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_add_task);
++
++        setupAddTaskButton();
++    }
++
++    void setupAddTaskButton(){
++        Button addTaskButton = findViewById(R.id.AddTaskInputButton);
++        addTaskButton.setOnClickListener(view -> {
++            ((TextView)findViewById(R.id.AddTaskSubmittedTextView)).setText("Submitted!");
++        });
++    }
+ }
+Index: app/src/main/java/com/navelfuzz/taskmaster/Activities/AllTasksActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.navelfuzz.taskmaster.activities;\n\npublic class AllTasksActivity {\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/navelfuzz/taskmaster/Activities/AllTasksActivity.java b/app/src/main/java/com/navelfuzz/taskmaster/Activities/AllTasksActivity.java
+--- a/app/src/main/java/com/navelfuzz/taskmaster/Activities/AllTasksActivity.java	(revision f3e122c9c3493858f1d16253235e8e697e033a38)
++++ b/app/src/main/java/com/navelfuzz/taskmaster/Activities/AllTasksActivity.java	(date 1693318687778)
+@@ -1,4 +1,14 @@
+-package com.navelfuzz.taskmaster.activities;
++package com.navelfuzz.taskmaster.Activities;
++
++import android.os.Bundle;
++import com.navelfuzz.taskmaster.R;
++import androidx.appcompat.app.AppCompatActivity;
+ 
+-public class AllTasksActivity {
++public class AllTasksActivity extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState){
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_all_tasks);
++    }
+ }
+Index: app/src/main/res/layout-land/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    tools:context=\".MainActivity\">\n\n    <TextView\n        android:id=\"@+id/myTasks\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginStart=\"36dp\"\n        android:layout_marginTop=\"119dp\"\n        android:layout_marginEnd=\"232dp\"\n        android:text=\"My Tasks\"\n        android:textSize=\"34sp\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintStart_toStartOf=\"parent\"\n        app:layout_constraintTop_toTopOf=\"parent\" />\n\n    <ImageView\n        android:id=\"@+id/imageView\"\n        android:layout_width=\"150dp\"\n        android:layout_height=\"150dp\"\n        android:layout_marginStart=\"130dp\"\n        android:layout_marginEnd=\"130dp\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintStart_toStartOf=\"parent\"\n        app:layout_constraintTop_toTopOf=\"parent\"\n        app:srcCompat=\"@android:drawable/ic_menu_help\" />\n\n    <Button\n        android:id=\"@+id/MainActivityAddTask\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginStart=\"36dp\"\n        android:layout_marginBottom=\"134dp\"\n        android:text=\"ADD TASK\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintStart_toStartOf=\"parent\" />\n\n    <Button\n        android:id=\"@+id/MainActivityAllTasks\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginEnd=\"36dp\"\n        android:layout_marginBottom=\"134dp\"\n        android:text=\"ALL TASKS\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintEnd_toEndOf=\"parent\" />\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout-land/activity_main.xml b/app/src/main/res/layout-land/activity_main.xml
+--- a/app/src/main/res/layout-land/activity_main.xml	(revision f3e122c9c3493858f1d16253235e8e697e033a38)
++++ b/app/src/main/res/layout-land/activity_main.xml	(date 1693902423155)
+@@ -7,20 +7,20 @@
+     tools:context=".MainActivity">
+ 
+     <TextView
+-        android:id="@+id/myTasks"
++        android:id="@+id/MainActivityTextView"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="36dp"
+         android:layout_marginTop="119dp"
+         android:layout_marginEnd="232dp"
+-        android:text="My Tasks"
++        android:text="@string/my_tasks"
+         android:textSize="34sp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+ 
+     <ImageView
+-        android:id="@+id/imageView"
++        android:id="@+id/MainActivityImageView"
+         android:layout_width="150dp"
+         android:layout_height="150dp"
+         android:layout_marginStart="130dp"
+@@ -32,22 +32,22 @@
+         app:srcCompat="@android:drawable/ic_menu_help" />
+ 
+     <Button
+-        android:id="@+id/MainActivityAddTask"
++        android:id="@+id/MainActivityAddTaskButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="36dp"
+         android:layout_marginBottom="134dp"
+-        android:text="ADD TASK"
++        android:text="@string/add_task"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintStart_toStartOf="parent" />
+ 
+     <Button
+-        android:id="@+id/MainActivityAllTasks"
++        android:id="@+id/MainActivityAllTasksButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginEnd="36dp"
+         android:layout_marginBottom="134dp"
+-        android:text="ALL TASKS"
++        android:text="@string/all_tasks"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent" />
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\n    <string name=\"app_name\">TaskMaster</string>\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+--- a/app/src/main/res/values/strings.xml	(revision f3e122c9c3493858f1d16253235e8e697e033a38)
++++ b/app/src/main/res/values/strings.xml	(date 1693328668946)
+@@ -1,3 +1,15 @@
+ <resources>
+     <string name="app_name">TaskMaster</string>
++    <string name="my_tasks">My Tasks</string>
++    <string name="add_task">ADD TASK</string>
++    <string name="all_tasks">ALL TASKS</string>
++    <string name="main_activity_img">Placeholder Img</string>
++    <string name="add_task_activity_label">Add Task</string>
++    <string name="task_input_label">Task Title</string>
++    <string name="add_task_input">My Task</string>
++    <string name="add_task_description_label">Task Description</string>
++    <string name="add_task_description_input_field">Do Something</string>
++    <string name="add_task_total_tasks">Total tasks: 0</string>
++    <string name="all_tasks_activity_title">All Tasks</string>
++    <string name="all_tasks_placeholder_img">All Tasks Placeholder img</string>
+ </resources>
+\ No newline at end of file
+Index: app/src/main/java/com/navelfuzz/taskmaster/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.navelfuzz.taskmaster;\n\nimport androidx.appcompat.app.AppCompatActivity;\n\nimport android.os.Bundle;\n\npublic class MainActivity extends AppCompatActivity {\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main);\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/navelfuzz/taskmaster/MainActivity.java b/app/src/main/java/com/navelfuzz/taskmaster/MainActivity.java
+--- a/app/src/main/java/com/navelfuzz/taskmaster/MainActivity.java	(revision f3e122c9c3493858f1d16253235e8e697e033a38)
++++ b/app/src/main/java/com/navelfuzz/taskmaster/MainActivity.java	(date 1693318226538)
+@@ -2,7 +2,13 @@
+ 
+ import androidx.appcompat.app.AppCompatActivity;
+ 
++import android.content.Intent;
+ import android.os.Bundle;
++import android.widget.Button;
++
++import com.navelfuzz.taskmaster.Activities.AddTaskActivity;
++import com.navelfuzz.taskmaster.Activities.AllTasksActivity;
++
+ 
+ public class MainActivity extends AppCompatActivity {
+ 
+@@ -10,5 +16,25 @@
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_main);
++
++        setupAddTaskButton();
++        setupAllTasksButton();
++
++    }
++
++    void setupAddTaskButton(){
++        Button addTaskButton = findViewById(R.id.MainActivityAddTaskButton);
++        addTaskButton.setOnClickListener(view -> {
++            Intent goToAddTasksIntent = new Intent(MainActivity.this, AddTaskActivity.class);
++            startActivity(goToAddTasksIntent);
++        });
++    }
++
++    void setupAllTasksButton(){
++        Button allTasksButton = findViewById(R.id.MainActivityAllTasksButton);
++        allTasksButton.setOnClickListener(view -> {
++            Intent goToAllTasksIntent = new Intent(MainActivity.this, AllTasksActivity.class);
++            startActivity(goToAllTasksIntent);
++        });
+     }
+ }
+\ No newline at end of file
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:tools=\"http://schemas.android.com/tools\">\n\n    <application\n        android:allowBackup=\"true\"\n        android:dataExtractionRules=\"@xml/data_extraction_rules\"\n        android:fullBackupContent=\"@xml/backup_rules\"\n        android:icon=\"@mipmap/ic_launcher\"\n        android:label=\"@string/app_name\"\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\n        android:supportsRtl=\"true\"\n        android:theme=\"@style/Theme.TaskMaster\"\n        tools:targetApi=\"31\">\n        <activity\n            android:name=\".MainActivity\"\n            android:exported=\"true\">\n            <intent-filter>\n                <action android:name=\"android.intent.action.MAIN\" />\n\n                <category android:name=\"android.intent.category.LAUNCHER\" />\n            </intent-filter>\n        </activity>\n    </application>\n\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	(revision f3e122c9c3493858f1d16253235e8e697e033a38)
++++ b/app/src/main/AndroidManifest.xml	(date 1693307644925)
+@@ -13,8 +13,16 @@
+         android:theme="@style/Theme.TaskMaster"
+         tools:targetApi="31">
+         <activity
++            android:name=".Activities.AddTaskActivity"
++            android:exported="false" />
++        <activity
++            android:name=".Activities.AllTasksActivity"
++            android:exported="false" />
++        <activity
+             android:name=".MainActivity"
+             android:exported="true">
++
++
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+ 
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><project version=\"4\">\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_17\" default=\"true\" project-jdk-name=\"jbr-17\" project-jdk-type=\"JavaSDK\">\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\n  </component>\n  <component name=\"ProjectType\">\n    <option name=\"id\" value=\"Android\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision f3e122c9c3493858f1d16253235e8e697e033a38)
++++ b/.idea/misc.xml	(date 1693899776229)
+@@ -6,4 +6,11 @@
+   <component name="ProjectType">
+     <option name="id" value="Android" />
+   </component>
++  <component name="VisualizationToolProject">
++    <option name="state">
++      <ProjectState>
++        <option name="scale" value="1.0136798905608755" />
++      </ProjectState>
++    </option>
++  </component>
+ </project>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    tools:context=\".MainActivity\">\n\n    <TextView\n        android:id=\"@+id/myTasks\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginStart=\"36dp\"\n        android:layout_marginTop=\"119dp\"\n        android:layout_marginEnd=\"232dp\"\n        android:text=\"My Tasks\"\n        android:textSize=\"34sp\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintStart_toStartOf=\"parent\"\n        app:layout_constraintTop_toTopOf=\"parent\" />\n\n    <ImageView\n        android:id=\"@+id/imageView\"\n        android:layout_width=\"150dp\"\n        android:layout_height=\"150dp\"\n        android:layout_marginStart=\"130dp\"\n        android:layout_marginEnd=\"130dp\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintStart_toStartOf=\"parent\"\n        app:layout_constraintTop_toTopOf=\"parent\"\n        app:srcCompat=\"@android:drawable/ic_menu_help\" />\n\n    <Button\n        android:id=\"@+id/MainActivityAddTask\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginStart=\"36dp\"\n        android:layout_marginBottom=\"134dp\"\n        android:text=\"ADD TASK\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintStart_toStartOf=\"parent\" />\n\n    <Button\n        android:id=\"@+id/MainActivityAllTasks\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:layout_marginEnd=\"36dp\"\n        android:layout_marginBottom=\"134dp\"\n        android:text=\"ALL TASKS\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintEnd_toEndOf=\"parent\" />\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	(revision f3e122c9c3493858f1d16253235e8e697e033a38)
++++ b/app/src/main/res/layout/activity_main.xml	(date 1693900796454)
+@@ -7,47 +7,47 @@
+     tools:context=".MainActivity">
+ 
+     <TextView
+-        android:id="@+id/myTasks"
++        android:id="@+id/MainActivityTextView"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:layout_marginStart="36dp"
+-        android:layout_marginTop="119dp"
+-        android:layout_marginEnd="232dp"
+-        android:text="My Tasks"
+-        android:textSize="34sp"
+-        app:layout_constraintEnd_toEndOf="parent"
++        android:layout_marginStart="40dp"
++        android:layout_marginTop="40dp"
++        android:text="@string/my_tasks"
++        android:textSize="24sp"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
+ 
+     <ImageView
+-        android:id="@+id/imageView"
+-        android:layout_width="150dp"
+-        android:layout_height="150dp"
+-        android:layout_marginStart="130dp"
+-        android:layout_marginEnd="130dp"
+-        app:layout_constraintBottom_toBottomOf="parent"
++        android:id="@+id/MainActivityImageView"
++        android:layout_width="294dp"
++        android:layout_height="364dp"
++        android:layout_marginTop="60dp"
++        android:contentDescription="@string/main_activity_img"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
+-        app:srcCompat="@android:drawable/ic_menu_help" />
++        app:layout_constraintTop_toBottomOf="@+id/MainActivityTextView"
++        app:srcCompat="@drawable/ic_launcher_background"
++        tools:ignore="ImageContrastCheck" />
+ 
+     <Button
+-        android:id="@+id/MainActivityAddTask"
++        android:id="@+id/MainActivityAddTaskButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:layout_marginStart="36dp"
+-        android:layout_marginBottom="134dp"
+-        android:text="ADD TASK"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintStart_toStartOf="parent" />
++        android:layout_marginTop="68dp"
++        android:text="@string/add_task"
++        app:layout_constraintEnd_toStartOf="@+id/MainActivityAllTasksButton"
++        app:layout_constraintHorizontal_bias="0.432"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/MainActivityImageView" />
++
+ 
+     <Button
+-        android:id="@+id/MainActivityAllTasks"
++        android:id="@+id/MainActivityAllTasksButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:layout_marginEnd="36dp"
+-        android:layout_marginBottom="134dp"
+-        android:text="ALL TASKS"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent" />
++        android:layout_marginTop="68dp"
++        android:layout_marginEnd="64dp"
++        android:text="@string/all_tasks"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/MainActivityImageView" />
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/drawable/ic_launcher_background.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<vector xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    android:width=\"108dp\"\n    android:height=\"108dp\"\n    android:viewportWidth=\"108\"\n    android:viewportHeight=\"108\">\n    <path\n        android:fillColor=\"#3DDC84\"\n        android:pathData=\"M0,0h108v108h-108z\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M9,0L9,108\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M19,0L19,108\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M29,0L29,108\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M39,0L39,108\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M49,0L49,108\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M59,0L59,108\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M69,0L69,108\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M79,0L79,108\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M89,0L89,108\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M99,0L99,108\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M0,9L108,9\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M0,19L108,19\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M0,29L108,29\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M0,39L108,39\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M0,49L108,49\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M0,59L108,59\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M0,69L108,69\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M0,79L108,79\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M0,89L108,89\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M0,99L108,99\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M19,29L89,29\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M19,39L89,39\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M19,49L89,49\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M19,59L89,59\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M19,69L89,69\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M19,79L89,79\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M29,19L29,89\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M39,19L39,89\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M49,19L49,89\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M59,19L59,89\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M69,19L69,89\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n    <path\n        android:fillColor=\"#00000000\"\n        android:pathData=\"M79,19L79,89\"\n        android:strokeWidth=\"0.8\"\n        android:strokeColor=\"#33FFFFFF\" />\n</vector>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/ic_launcher_background.xml b/app/src/main/res/drawable/ic_launcher_background.xml
+--- a/app/src/main/res/drawable/ic_launcher_background.xml	(revision f3e122c9c3493858f1d16253235e8e697e033a38)
++++ b/app/src/main/res/drawable/ic_launcher_background.xml	(date 1693301757182)
+@@ -5,7 +5,7 @@
+     android:viewportWidth="108"
+     android:viewportHeight="108">
+     <path
+-        android:fillColor="#3DDC84"
++        android:fillColor="#11914A"
+         android:pathData="M0,0h108v108h-108z" />
+     <path
+         android:fillColor="#00000000"
+Index: app/src/main/res/layout/activity_all_tasks.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n             android:layout_width=\"match_parent\"\n             android:layout_height=\"match_parent\">\n\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_all_tasks.xml b/app/src/main/res/layout/activity_all_tasks.xml
+--- a/app/src/main/res/layout/activity_all_tasks.xml	(revision f3e122c9c3493858f1d16253235e8e697e033a38)
++++ b/app/src/main/res/layout/activity_all_tasks.xml	(date 1693328668942)
+@@ -1,6 +1,29 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-             android:layout_width="match_parent"
+-             android:layout_height="match_parent">
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent">
+ 
++    <TextView
++        android:id="@+id/AllTasksActivityTitle"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="40dp"
++        android:layout_marginTop="40dp"
++        android:textSize="24sp"
++        android:text="@string/all_tasks_activity_title"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <ImageView
++        android:id="@+id/AllTasksPlaceholderImg"
++        android:layout_width="202dp"
++        android:layout_height="203dp"
++        android:layout_marginTop="192dp"
++        android:contentDescription="@string/all_tasks_placeholder_img"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.497"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/AllTasksActivityTitle"
++        app:srcCompat="@android:drawable/sym_def_app_icon" />
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_add_task.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n             android:layout_width=\"match_parent\"\n             android:layout_height=\"match_parent\">\n\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_add_task.xml b/app/src/main/res/layout/activity_add_task.xml
+--- a/app/src/main/res/layout/activity_add_task.xml	(revision f3e122c9c3493858f1d16253235e8e697e033a38)
++++ b/app/src/main/res/layout/activity_add_task.xml	(date 1693901382255)
+@@ -1,6 +1,88 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-             android:layout_width="match_parent"
+-             android:layout_height="match_parent">
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent">
+ 
++    <TextView
++        android:id="@+id/AddTaskActivity"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="40dp"
++        android:layout_marginTop="64dp"
++        android:text="@string/add_task_activity_label"
++        android:textSize="24sp"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <TextView
++        android:id="@+id/TaskInputLabel"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="56dp"
++        android:text="@string/task_input_label"
++        app:layout_constraintStart_toStartOf="@+id/AddTaskActivity"
++        app:layout_constraintTop_toBottomOf="@+id/AddTaskActivity" />
++
++    <EditText
++        android:id="@+id/AddTaskInputField"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:autofillHints=""
++        android:ems="10"
++        android:inputType="text"
++        android:text="@string/add_task_input"
++        android:minHeight="48dp"
++        app:layout_constraintStart_toStartOf="@+id/TaskInputLabel"
++        app:layout_constraintTop_toBottomOf="@+id/TaskInputLabel" />
++
++    <TextView
++        android:id="@+id/TaskDescriptionInputLabel"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="32dp"
++        android:text="@string/add_task_description_label"
++        app:layout_constraintStart_toStartOf="@+id/AddTaskInputField"
++        app:layout_constraintTop_toBottomOf="@+id/AddTaskInputField" />
++
++    <EditText
++        android:id="@+id/AddTaskDescriptionInputField"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:autofillHints=""
++        android:ems="10"
++        android:inputType="text"
++        android:text="@string/add_task_description_input_field"
++        android:minHeight="48dp"
++        app:layout_constraintStart_toStartOf="@+id/TaskDescriptionInputLabel"
++        app:layout_constraintTop_toBottomOf="@+id/TaskDescriptionInputLabel" />
++
++    <Button
++        android:id="@+id/AddTaskInputButton"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="32dp"
++        android:text="@string/add_task"
++        app:layout_constraintStart_toStartOf="@+id/AddTaskDescriptionInputField"
++        app:layout_constraintTop_toBottomOf="@+id/AddTaskDescriptionInputField" />
++
++    <TextView
++        android:id="@+id/AddTaskTotalCount"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="@string/add_task_total_tasks"
++        android:layout_marginTop="48dp"
++        app:layout_constraintStart_toStartOf="@+id/AddTaskInputButton"
++        app:layout_constraintTop_toBottomOf="@+id/AddTaskInputButton" />
++
++    <TextView
++        android:id="@+id/AddTaskSubmittedTextView"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="56dp"
++        android:layout_marginTop="32dp"
++        app:layout_constraintStart_toEndOf="@+id/AddTaskInputButton"
++        app:layout_constraintTop_toBottomOf="@+id/AddTaskDescriptionInputField" />
++
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file

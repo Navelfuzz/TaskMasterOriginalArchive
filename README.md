@@ -1,14 +1,17 @@
 # TaskMaster Lab: Class 26 - Beginning TaskMaster
 
 ## Description
+
 This is an application which will evolve over time as a "To Do List" program that uses different 
 data storage and hosting methods and adds components and functionality over time.
 
 ### Instructions
+
 In order to run the Class 26 version of the application, you must run it through an Android Emulator. 
 It was constructed using a Pixel 3a XL emulator with a minimum android API 24 and target of 33.
 
 ## Change Log
+
 Class 26 is the initial buildout which had the following requirements:
 1. Homepage
     * Title
@@ -31,25 +34,18 @@ Class 26 is the initial buildout which had the following requirements:
 ## Links/Notes/Info
 
 *Resources from the Lab Assignment Materials*
+
 [Android Buttons](https://developer.android.com/guide/topics/ui/controls/button.html)
 
 [Android UI Events](https://developer.android.com/guide/topics/ui/ui-events.html)
 
 *Wireframe examples provided*
-![Homepage Wireframe](wireframes/lab26/taskmaster_homepage.png)
 
-![Add Task Wireframe](wireframes/lab26/taskmaster_add_task.png)
-
-![All Tasks Wireframe](wireframes/lab26/taskmaster_all_tasks.png)
-
+<img src="wireframes/lab26/taskmaster_homepage.png" alt="homepageWire" width="200"/> <img src="wireframes/lab26/taskmaster_add_task.png" alt="addTaskWire" width="200"/> <img src="wireframes/lab26/taskmaster_all_tasks.png" alt="allTaskWire" width="200"/>
 
 ## Screenshots for Lab: Class 26
 
-![Homepage Screenshot](screenshots/lab26/Homepage%20SS%2026.png)
-
-![Add Task Screenshot](screenshots/lab26/Add%20Task%20SS%2026.png)
-
-![All Tasks Screenshot](screenshots/lab26/All%20Tasks%20SS%2026.png)
+<img src="screenshots/lab26/Homepage%20SS%2026.png" alt="homepageScreen" width="200"/> <img src="screenshots/lab26/Add%20Task%20SS%2026.png" alt="addTaskScreen" width="200"/> <img src="screenshots/lab26/All%20Tasks%20SS%2026.png" alt="allTasksScreen" width="200 "/>
 
 ### Idiot's guide (Meaning me.. So I don't forget a few things) to Navigation: Important Locations
 

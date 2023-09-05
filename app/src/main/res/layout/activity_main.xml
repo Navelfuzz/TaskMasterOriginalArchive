@@ -7,47 +7,47 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/myTasks"
+        android:id="@+id/MainActivityTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="119dp"
-        android:layout_marginEnd="232dp"
-        android:text="My Tasks"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/my_tasks"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="130dp"
-        android:layout_marginEnd="130dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/MainActivityImageView"
+        android:layout_width="294dp"
+        android:layout_height="364dp"
+        android:layout_marginTop="60dp"
+        android:contentDescription="@string/main_activity_img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_help" />
+        app:layout_constraintTop_toBottomOf="@+id/MainActivityTextView"
+        app:srcCompat="@drawable/ic_launcher_background"
+        tools:ignore="ImageContrastCheck" />
 
     <Button
-        android:id="@+id/MainActivityAddTask"
+        android:id="@+id/MainActivityAddTaskButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="134dp"
-        android:text="ADD TASK"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="68dp"
+        android:text="@string/add_task"
+        app:layout_constraintEnd_toStartOf="@+id/MainActivityAllTasksButton"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MainActivityImageView" />
+
 
     <Button
-        android:id="@+id/MainActivityAllTasks"
+        android:id="@+id/MainActivityAllTasksButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="134dp"
-        android:text="ALL TASKS"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="64dp"
+        android:text="@string/all_tasks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MainActivityImageView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

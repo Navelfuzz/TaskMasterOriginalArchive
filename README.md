@@ -58,7 +58,7 @@ It was constructed using a Pixel 3a XL emulator with a minimum android API 24 an
 
 ## Screenshots for Lab: Class 27
 
-![]()
+![Task Detail Page]()
 
 ### Idiot's guide (Meaning me.. So I don't forget a few things) to Navigation: Important Locations
 

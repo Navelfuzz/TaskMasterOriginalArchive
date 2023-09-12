@@ -58,7 +58,10 @@ It was constructed using a Pixel 3a XL emulator with a minimum android API 24 an
 
 ## Screenshots for Lab: Class 27
 
-![Task Detail Page]()
+<img src="screenshots/lab27/HompageSS27.png" alt="homepageScreen" width="200"/> 
+<img src="screenshots/lab27/SettingsSS27.png" alt="settingsPage" width="200"/> 
+<img src="screenshots/lab27/TaskDetailSS27.png" alt="taskDetails" width="200 "/>
+
 
 ### Idiot's guide (Meaning me.. So I don't forget a few things) to Navigation: Important Locations
 

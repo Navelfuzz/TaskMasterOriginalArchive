@@ -73,10 +73,9 @@ ___
 
 [Android UI Events](https://developer.android.com/guide/topics/ui/ui-events.html)
 
-*Wireframe examples provided*
-
-<img src="./wireframes/lab26/taskmaster_homepage.png" alt="homepageWire" width="200"/> <img src="wireframes/lab26/taskmaster_add_task.png" alt="addTaskWire" width="200"/> <img src="wireframes/lab26/taskmaster_all_tasks.png" alt="allTaskWire" width="200"/>
 
 ## Screenshots for Lab: Class 26
 
-<img src="../screenshots/lab26/Homepage SS 26.png" alt="homepageScreen" width="200"/> <img src="../screenshots/lab26/Add Task SS 26.png" alt="addTaskScreen" width="200"/> <img src="../screenshots/lab26/All Tasks SS 26.png" alt="allTasksScreen" width="200 "/>
+<img src="../screenshots/lab26/Homepage SS 26.png" alt="homepageScreen" width="200"/> 
+<img src="../screenshots/lab26/Add Task SS 26.png" alt="addTask" width="200"/> 
+<img src="../screenshots/lab26/All Tasks SS 26.png" alt="allTasks" width="200 "/>

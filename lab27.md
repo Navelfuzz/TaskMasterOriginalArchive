@@ -62,3 +62,7 @@ Allow the user to specify on their settings page how many tasks should be shown 
 * 1 pt Saving username on settings page means it is displayed on homepage forevermore
 * 1 pt General functionality & usability
 * 1 pt README with description, screenshots, and daily change log
+
+<img src="screenshots/lab27/HompageSS27.png" alt="homepageScreen" width="200"/> 
+<img src="screenshots/lab27/SettingsSS27.png" alt="settingsPage" width="200"/> 
+<img src="screenshots/lab27/TaskDetailSS27.png" alt="taskDetails" width="200 "/>

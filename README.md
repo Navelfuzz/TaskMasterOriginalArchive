@@ -65,24 +65,13 @@ It was constructed using a Pixel 3a XL emulator with a minimum android API 24 an
    
 **All these requirements were implemented**
 
-## Links/Notes/Info
-
-[//]: # (*Resources from the Lab Assignment Materials*)
-
-[//]: # (*[Android SharedPreferences]&#40;https://developer.android.com/training/data-storage/shared-preferences&#41;)
-
-[//]: # (*[The Activity Lifecycle]&#40;https://developer.android.com/guide/components/activities/activity-lifecycle&#41;)
-
-[//]: # (*[Android Studio User Guide]&#40;https://developer.android.com/studio/intro&#41;)
+[//]: # (## Links/Notes/Info)
 
 ## Screenshots for Lab: Class 28
 
-[//]: # (<img src="screenshots/lab27/HompageSS27.png" alt="homepageScreen" width="200"/> )
+<img src="screenshots/lab28/homeRecyclerView.png" alt="home recyclerview" width="200"/> 
 
-[//]: # (<img src="screenshots/lab27/SettingsSS27.png" alt="settingsPage" width="200"/> )
-
-[//]: # (<img src="screenshots/lab27/TaskDetailSS27.png" alt="taskDetails" width="200 "/>)
-
+<img src="screenshots/lab28/recyclerViewTaskDetail.png" alt="task detail" width="200"/> 
 
 ### Idiot's guide (Meaning me.. So I don't forget a few things) to Navigation: Important Locations
 

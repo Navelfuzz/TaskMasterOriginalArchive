@@ -41,3 +41,9 @@ Consider the styling for this app. Decide on a color scheme and font families to
 Allow the user to specify on their settings page how many tasks should be shown on the homepage. Use this to dynamically create as many tasks as the user requests for display in the RecyclerView.
 In addition to sending the Task title to the detail page, also display the description of that task instead of the Lorem Ipsum text.
 
+### Lab 28 Screenshots
+
+<img src="../screenshots/lab28/homeRecyclerView.png" alt="home recyclerview" width="200"/> 
+<img src="../screenshots/lab28/recyclerViewTaskDetail.png" alt="task detail" width="200"/> 
+
+

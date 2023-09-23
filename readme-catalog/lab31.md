@@ -29,10 +29,8 @@ Add more Espresso UI tests to your application, if you haven’t already. Make s
 Allow the user to specify on their settings page how many tasks should be shown on the homepage. Use this to dynamically display as many tasks as the user requests for display in the RecyclerView. Test this functionality using Espresso.
 Add in any other features or styling that you wish existed in TaskMaster.
 
-### Submission Instructions
+### Screenshots
 
-Continue working in your taskmaster repo.
-Work on a non-master branch and make commits appropriately.
-Update your README with your changes for today and screenshot of your work.
-Create a pull request to your master branch with your work for this lab.
-Submit the link to that pull request on Canvas. Add a comment with the amount of time you spent on this assignment.
+<img src="../screenshots/lab31/mainActivityTest.png" alt="MainActivityTest" width="800"/>
+<img src="../screenshots/lab31/mainActivityTest2.png" alt="MainActivityTest2" width="800"/>
+<img src="../screenshots/lab31/userNameTest.png" alt="UserNameTest" width="800"/>

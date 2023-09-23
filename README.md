@@ -106,8 +106,12 @@ It was constructed using a Pixel 3a XL emulator with a minimum android API 24 an
 
 ## Screenshots for Lab: Class 31
 
-<img src="screenshots/lab31/XXXXXXX.png" alt="XXXXXX" width="200"/> 
-<img src="screenshots/lab31/XXXXXXX.png" alt="XXXXXX" width="200"/>
+<img src="screenshots/lab31/mainActivityTest.png" alt="MainActivityTest" width="800"/> 
+
+<img src="screenshots/lab31/mainActivityTest2.png" alt="MainActivityTest2" width="800"/>
+
+<img src="screenshots/lab31/userNameTest.png" alt="UserNameTest" width="800"/>
+
 
 ### Idiot's guide (Meaning me.. So I don't forget a few things) to Navigation: Important Locations
 

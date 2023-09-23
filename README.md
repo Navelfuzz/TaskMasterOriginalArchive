@@ -5,6 +5,7 @@
 * [Lab 28: RecyclerViews](#class-28-recyclerviews)
 * [Lab 29: Room](#class-29-room)
 * [Lab 31: Espresso Tests](#class-31-testing-views-with-espresso)
+* [Lab 32: Amplify AWS](#class-32--amplify-aws)
 
 ___
 
@@ -15,7 +16,7 @@ ___
 * [Lab 28: RecyclerViews](/readme-catalog/lab28.md)
 * [Lab 29: Room](/readme-catalog/lab29.md)
 * [Lab 31: Espresso Tests](/readme-catalog/lab31.md)
-
+* [Lab 32: Amplify AWS](/readme-catalog/lab32.md)
 ___
 
 ## Description
@@ -28,7 +29,16 @@ data storage and hosting methods and adds components and functionality over time
 In order to run the application, you must run it through an Android Emulator. 
 It was constructed using a Pixel 3a XL emulator with a minimum android API 24 and target of 33.
 
+***Lab 32: Espresso Tests Additional Instructions:***
+To run tests (and view them running), run emulator within Android Studio. All Test `.java` files are located: `app/src/androidTest/java/com/navelfuzz/taskmaster/*` 
+
+Or
+
+Use the `.gradlew/*` CLI command
+
 ## Change Log
+
+### Class 32: Amplify AWS
 
 ### Class 31: Testing Views with Espresso
 
@@ -116,13 +126,9 @@ It was constructed using a Pixel 3a XL emulator with a minimum android API 24 an
 
 [//]: # (## Links/Notes/Info)
 
-## Screenshots for Lab: Class 31
+## Screenshots for Lab: Class 32
 
-<img src="screenshots/lab31/mainActivityTest.png" alt="MainActivityTest" width="800"/> 
-
-<img src="screenshots/lab31/mainActivityTest2.png" alt="MainActivityTest2" width="800"/>
-
-<img src="screenshots/lab31/userNameTest.png" alt="UserNameTest" width="800"/>
+<img src="screenshots/lab32/XXXXXXX.png" alt="XXXXXXX" width="200"/> 
 
 
 ### Idiot's guide (Meaning me.. So I don't forget a few things) to Navigation: Important Locations

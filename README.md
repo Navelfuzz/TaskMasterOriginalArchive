@@ -4,6 +4,7 @@
 * [Lab 27: Adding Data](#class-27--adding-data-lab)
 * [Lab 28: RecyclerViews](#class-28--recyclerviews)
 * [Lab 29: Room](#class-29--room)
+* [Lab 31: Espresso Tests](#class-31--testing-views-with-espresso)
 
 ## Description
 
@@ -17,16 +18,40 @@ It was constructed using a Pixel 3a XL emulator with a minimum android API 24 an
 
 ## Change Log
 
+### Class 31: Testing Views with Espresso
+
+1. Espresso Testing
+   * Add more Espresso UI tests to your application, if you haven’t already. Make sure you do at least these three tests:
+     * assert that important UI elements are displayed on the page
+     * tap on a task, and assert that the resulting activity displays the name of that task
+     * edit the user’s username, and assert that it says the correct thing on the homepage
+
+   ***Special Note:***
+   * I had to add the following to the build.gradle file in order to get the tests to run:
+    ```    
+    implementation "androidx.tracing:tracing:1.1.0"
+    ```
+   * Additionally in my MainAcivityTest2 I had to adjust the 105 line and comment out the `pressBack();` in order to stop the 
+   test from closing the application and failing. I am not sure why this is happening, but I will look into it further.
+
+    #### Test Purposes
+   1. UserNameTest - Tests that the username is displayed on the homepage
+   2. MainActivityTest - Tests that both MainActivity buttons navigate to their corresponding pages
+   3. MainActivityTest2 - Tests that adding a task and clicking on that task in the RecyclerView navigates to that task's details page
+
+2. Built APK
+   * Did not do this for the Class 27 lab but did for this one as said in the Lab 27 lecture it would be required for this weeks labs for points.
+
 ### Class 29: Room 
 
 1. Task Model and Room
    * Following the directions provided in the Android documentation, set up Room in your application, and modify your Task class to be an Entity.
 2. Add Task Form
-    * Modify your Add Task form to save the data entered in as a Task in your local database.
+   * Modify your Add Task form to save the data entered in as a Task in your local database.
 3. Homepage
-    * Refactor your homepage’s RecyclerView to display all Task entities in your database.
+   * Refactor your homepage’s RecyclerView to display all Task entities in your database.
 4. Detail Page
-    * Ensure that the description and status of a tapped task are also displayed on the detail page, in addition to the title. (Note that you can accomplish this by passing along the entire Task entity, or by passing along only its ID in the intent.)
+   * Ensure that the description and status of a tapped task are also displayed on the detail page, in addition to the title. (Note that you can accomplish this by passing along the entire Task entity, or by passing along only its ID in the intent.)
 
 #### Class 28: RecyclerViews
 
@@ -79,10 +104,14 @@ It was constructed using a Pixel 3a XL emulator with a minimum android API 24 an
 
 [//]: # (## Links/Notes/Info)
 
-## Screenshots for Lab: Class 29
+## Screenshots for Lab: Class 31
 
-<img src="screenshots/lab29/homeRoomList.png" alt="home recyclerview" width="200"/> 
-<img src="screenshots/lab29/detailRoomItem.png" alt="task detail" width="200"/> 
+<img src="screenshots/lab31/mainActivityTest.png" alt="MainActivityTest" width="800"/> 
+
+<img src="screenshots/lab31/mainActivityTest2.png" alt="MainActivityTest2" width="800"/>
+
+<img src="screenshots/lab31/userNameTest.png" alt="UserNameTest" width="800"/>
+
 
 ### Idiot's guide (Meaning me.. So I don't forget a few things) to Navigation: Important Locations
 

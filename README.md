@@ -1,10 +1,22 @@
 # TaskMaster Lab Series Main Readme/TOC
 
-* [Lab 26: Taskmaster Initial](#class-26-is-the-initial-buildout-which-had-the-following-requirements-)
-* [Lab 27: Adding Data](#class-27--adding-data-lab)
-* [Lab 28: RecyclerViews](#class-28--recyclerviews)
-* [Lab 29: Room](#class-29--room)
-* [Lab 31: Espresso Tests](#class-31--testing-views-with-espresso)
+* [Lab 26: Taskmaster Initial](#class-26-taskmaster-initial)
+* [Lab 27: Adding Data](#class-27-adding-data-lab)
+* [Lab 28: RecyclerViews](#class-28-recyclerviews)
+* [Lab 29: Room](#class-29-room)
+* [Lab 31: Espresso Tests](#class-31-testing-views-with-espresso)
+
+___
+
+### Directory of individual lab Readme files: [readme-catalog](/readme-catalog/)
+
+* [Lab 26: Taskmaster Initial](/readme-catalog/lab26.md)
+* [Lab 27: Adding Data](/readme-catalog/lab27.md)
+* [Lab 28: RecyclerViews](/readme-catalog/lab28.md)
+* [Lab 29: Room](/readme-catalog/lab29.md)
+* [Lab 31: Espresso Tests](/readme-catalog/lab31.md)
+
+___
 
 ## Description
 
@@ -53,7 +65,7 @@ It was constructed using a Pixel 3a XL emulator with a minimum android API 24 an
 4. Detail Page
    * Ensure that the description and status of a tapped task are also displayed on the detail page, in addition to the title. (Note that you can accomplish this by passing along the entire Task entity, or by passing along only its ID in the intent.)
 
-#### Class 28: RecyclerViews
+### Class 28: RecyclerViews
 
 1. Task Model
    * Create a Task class. A task should have:
@@ -68,7 +80,7 @@ It was constructed using a Pixel 3a XL emulator with a minimum android API 24 an
    * Ensure that you can tap on any one of the Tasks in the RecyclerView and it will appropriately launch the detail page with the correct Task title displayed.
 
 
-#### Class 27: Adding Data Lab
+### Class 27: Adding Data Lab
 1. Task Details Page
    * Show the selected task's title
    * Lorem Ipsum that description
@@ -83,7 +95,7 @@ It was constructed using a Pixel 3a XL emulator with a minimum android API 24 an
          * Title at top of page should match task selected
 
 
-#### Class 26 is the initial buildout which had the following requirements:
+### Class: 26 TaskMaster Initial
 1. Homepage
     * Title
     * Placeholder Img

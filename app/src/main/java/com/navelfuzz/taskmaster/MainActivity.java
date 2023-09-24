@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     void updateTasksListFromDatabase(){
-        tasks.clear();
+//        tasks.clear();
 //        tasks.addAll(taskDatabase.taskDao().findAll());
         adapter.notifyDataSetChanged();
     }

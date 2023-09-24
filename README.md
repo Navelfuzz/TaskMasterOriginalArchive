@@ -40,6 +40,8 @@ Use the `.gradlew/*` CLI command
 
 ### Class 32: Amplify AWS
 
+1. Branch `lab32a`: Deletion of Room and preparations for AWS implementation.
+
 ### Class 31: Testing Views with Espresso
 
 1. Espresso Testing

@@ -12,16 +12,19 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.content.Intent;
 import android.graphics.Rect;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.amplifyframework.api.graphql.model.ModelQuery;
+import com.amplifyframework.core.Amplify;
 import com.navelfuzz.taskmaster.activities.AddTaskActivity;
 import com.navelfuzz.taskmaster.activities.AllTasksActivity;
 import com.navelfuzz.taskmaster.activities.SettingsActivity;
 import com.navelfuzz.taskmaster.adapters.ViewAdapter;
-import com.navelfuzz.taskmaster.models.Task;
+import com.amplifyframework.datastore.generated.model.Task;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,15 +48,16 @@ public class MainActivity extends AppCompatActivity {
 
         setupSettingsButton();
         setupAddTaskButton();
+        updateTasksListFromDatabase();
         setupAllTasksButton();
         setupRecyclerView();
+
     }
 
     @Override
     protected void onResume(){
         super.onResume();
         setupUsernameTextView();
-
         updateTasksListFromDatabase();
     }
 
@@ -110,36 +114,19 @@ public class MainActivity extends AppCompatActivity {
 
 
     void updateTasksListFromDatabase(){
-//        tasks.clear();
-//        tasks.addAll(taskDatabase.taskDao().findAll());
-        adapter.notifyDataSetChanged();
+        Amplify.API.query(
+                ModelQuery.list(Task.class),
+                success -> {
+                    Log.i(TAG, "Read tasks successfully.");
+                    tasks.clear();
+                    for(Task databaseTask : success.getData()){
+                        tasks.add(databaseTask);
+                    }
+                    runOnUiThread(() -> {
+                        adapter.notifyDataSetChanged();
+                    });
+                },
+                failure -> Log.i(TAG, "Did not read tasks successfully.")
+        );
     }
 }
-
-
-// Removed from previous labs
-
-//    void setupTaskDetailButtons(){
-//        Button taskOneDetailButton = findViewById(R.id.MainActivityViewTaskOneButton);
-//        taskOneDetailButton.setOnClickListener(view -> {
-//            String taskName = ((Button)findViewById(R.id.MainActivityViewTaskOneButton)).getText().toString();
-//
-//            Intent goToTaskDetailIntent = new Intent(MainActivity.this, TaskDetailActivity.class);
-//            goToTaskDetailIntent.putExtra(TASK_NAME_TAG, taskName);
-//            startActivity(goToTaskDetailIntent);
-//        });
-//    }
-
-
-//    void createTaskInstances(){
-//        tasks.add(new Task("First Task", "You need to do some stuff"));
-//        tasks.add(new Task("Second Task", "You need to do some stuff"));
-//        tasks.add(new Task("Third Task", "You need to do some stuff"));
-//        tasks.add(new Task("Fourth Task", "You need to do some stuff"));
-//        tasks.add(new Task("Fifth Task", "You need to do some stuff"));
-//        tasks.add(new Task("Sixth Task", "You need to do some stuff"));
-//        tasks.add(new Task("Seventh Task", "You need to do some stuff"));
-//        tasks.add(new Task("Eighth Task", "You need to do some stuff"));
-//        tasks.add(new Task("Ninth Task", "You need to do some stuff"));
-//        tasks.add(new Task("Tenth Task", "You need to do some stuff"));
-//    }

@@ -42,5 +42,5 @@ today, no new updates required).
 
 ### Screenshots
 
-<img src="../screenshots/lab32/homepage32.png" alt="homepage view lab32" width="200"/> 
-<img src="../screenshots/lab32/amplifyTable.png" alt="amplify aws table inputs" width="200"/> 
+<img src="../screenshots/lab32/homepage32.png" alt="homepage view lab32" width="150"/> 
+<img src="../screenshots/lab32/amplifyTable.png" alt="amplify aws table inputs" width="600"/> 

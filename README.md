@@ -161,8 +161,8 @@ Use the `.gradlew/*` CLI command
 
 ## Screenshots for Lab: Class 32
 
-<img src="screenshots/lab32/homepage32.png" alt="homepage view lab32" width="200"/> 
-<img src="screenshots/lab32/amplifyTable.png" alt="amplify aws table inputs" width="200"/>
+<img src="screenshots/lab32/homepage32.png" alt="homepage view lab32" width="150"/> 
+<img src="screenshots/lab32/amplifyTable.png" alt="amplify aws table inputs" width="600"/>
 
 
 ### Idiot's guide (Meaning me.. So I don't forget a few things) to Navigation: Important Locations

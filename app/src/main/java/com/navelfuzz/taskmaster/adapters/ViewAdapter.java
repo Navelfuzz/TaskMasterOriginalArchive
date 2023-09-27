@@ -20,9 +20,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class ViewAdapter extends RecyclerView.Adapter<ViewAdapter.TaskListViewHolder>{
-
     List<Task> tasks;
-
     Context callingActivity;
 
     public ViewAdapter(List<Task> tasks, Context callingActivity){

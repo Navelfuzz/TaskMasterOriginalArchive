@@ -40,10 +40,10 @@ public class AddTaskActivity extends AppCompatActivity {
         //TODO: Make a DynamoDB/GraphQL call
             Task taskToSave = Task.builder()
                     .title(taskInputEditText.getText().toString())
-                            .body(descriptionInputEditText.getText().toString())
-                                    .dateCreated(new Temporal.DateTime(new Date(), 0))
-                                            .status(TaskStatusEnum.New)
-                                                    .build();
+                    .body(descriptionInputEditText.getText().toString())
+                    .dateCreated(new Temporal.DateTime(new Date(), 0))
+                    .status(TaskStatusEnum.New)
+                    .build();
             Amplify.API.mutate(
                     ModelMutation.create(taskToSave),
                     successResponse -> Log.i(TAG, "AddTaskActivity.setupAddTaskButton(): made task successfully"),

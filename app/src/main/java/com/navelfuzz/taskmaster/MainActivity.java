@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
     public static final String TASK_DESC_TAG = "taskDesc";
     public static final String TASK_STATUS_TAG = "taskStatus";
     SharedPreferences preferences;
-
     List<Task> tasks = new ArrayList<>();
     ViewAdapter adapter;
 
@@ -48,10 +47,9 @@ public class MainActivity extends AppCompatActivity {
 
         setupSettingsButton();
         setupAddTaskButton();
-        updateTasksListFromDatabase();
         setupAllTasksButton();
+        updateTasksListFromDatabase();
         setupRecyclerView();
-
     }
 
     @Override

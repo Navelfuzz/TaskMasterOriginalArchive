@@ -1,9 +1,6 @@
 package com.navelfuzz.taskmaster.models;
 
-
-
 import java.util.Date;
-
 
 public class Task {
     String title;

@@ -45,7 +45,7 @@ public class AddTaskActivity extends AppCompatActivity {
                     .status(TaskStatusEnum.New)
                     .build();
             Amplify.API.mutate(
-                    ModelMutation.create(taskToSave),
+                    ModelMutation.create(taskToSave), // making a GraphQL
                     successResponse -> Log.i(TAG, "AddTaskActivity.setupAddTaskButton(): made task successfully"),
                     failureResponse -> Log.i(TAG, "AddTaskActivity.setupAddTaskButton(): failed with this response" + failureResponse)
             );

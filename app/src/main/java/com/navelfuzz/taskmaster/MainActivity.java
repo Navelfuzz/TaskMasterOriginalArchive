@@ -15,6 +15,7 @@ import android.graphics.Rect;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -34,9 +35,17 @@ public class MainActivity extends AppCompatActivity {
     public static final String TASK_NAME_TAG = "taskName";
     public static final String TASK_DESC_TAG = "taskDesc";
     public static final String TASK_STATUS_TAG = "taskStatus";
-    SharedPreferences preferences;
+
     List<Task> tasks = new ArrayList<>();
     ViewAdapter adapter;
+    SharedPreferences preferences;
+
+//    Button addTaskButton;
+//    Button allTasksButton;
+//    ImageView settingsButton;
+//    EditText taskInputEditText;
+//    RecyclerView taskListRecyclerView;
+//    TextView usernameTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
